@@ -87,7 +87,7 @@ const Events = () => {
 
   const fetchWeather = async (location, date, eventId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/events/weather?location=${location}&date=${date}`);
+      const response = await axios.get(`https://event-server-1-t82h.onrender.com/api/events/weather?location=${location}&date=${date}`);
       setWeatherData(prevWeatherData => ({
         ...prevWeatherData,
         [eventId]: response.data,
